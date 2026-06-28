@@ -1,9 +1,5 @@
 # Appsync code generation rules
 
-Last updated: March 21st, 2026
-
-When generating code for AppSync resolvers, place files under a directory named **`appsync`** (e.g. `domains/<domain>/graphql/.../appsync/` or `infra/platform/graphql/.../appsync/`). That code is bundled by **`esbuild.mjs`** and runs under a **restricted** AppSync JavaScript runtime — not all usual JS features are supported.
-
 ## Restrictions
 
 Make sure the following rules are followed:
@@ -21,6 +17,8 @@ Make sure the following rules are followed:
 - These operators are not allowed: `++`, `--`, `~`.
 - `in` operator is not supported. Use `Object.hasOwn` to check if the specified property is in the specified object.
 
+
+
 ## Supported runtime features
 
 [More information in AWS Docs](https://docs.aws.amazon.com/appsync/latest/devguide/supported-features.html)
@@ -36,9 +34,11 @@ Make sure the following rules are followed:
   - `void` and `typeof` operators.
   - Spread operators (`...`).
 - **Statements**: `const`, `let`, `var`, `break`, `else`, `for-in`, `for-of`, `if`, `return`, `switch`, spread syntax.
-- \*_Literals_: multi-line strings, expression interpolation, nesting templates.
+- *Literals*: multi-line strings, expression interpolation, nesting templates.
 - **Functions**: Function declarations, ES6 arrow functions, ES6 rest parameter syntax.
 - **Strict mode**: enabled by default, no need to specify `use_strict` explicitly.
+
+
 
 ### Primitive objects
 
@@ -52,7 +52,7 @@ Note: for `String.prototype.replace()` and `String.prototype.replaceAll()` - reg
 
 - **Math**: `Math.random()`, `Math.min()`, `Math.max()`, `Math.round()`, `Math.floor()`, `Math.ceil()`.
 - **Array**:
-  - Array.prototype.<function>: `length`, `concat`, `fill`, `flat`, `indexOf`, `join`, `lastIndexOf`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort` (without any arguments), `splice`, `unshift`, `forEach`, `map`, `flatMap`, `filter`, `reduce`, `reduceRight`, `find`, `some`, `every`, `findIndex`, `findLast`, `findLastIndex`.
+  - Array.prototype.: `length`, `concat`, `fill`, `flat`, `indexOf`, `join`, `lastIndexOf`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort` (without any arguments), `splice`, `unshift`, `forEach`, `map`, `flatMap`, `filter`, `reduce`, `reduceRight`, `find`, `some`, `every`, `findIndex`, `findLast`, `findLastIndex`.
   - `delete`
 - **Console**: `console.error()`, `console.log()`.
 - **Function**:
@@ -61,6 +61,8 @@ Note: for `String.prototype.replace()` and `String.prototype.replaceAll()` - reg
   - Passing a function as an argument is not supported.
   - Recursive function calls are not supported.
 - **JSON**: `JSON.parse()` (returns a blank string if the parsed string is not valid JSON), `JSON.stringify()`.
+
+
 
 ### Globals
 

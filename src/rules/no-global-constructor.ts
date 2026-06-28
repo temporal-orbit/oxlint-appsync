@@ -1,5 +1,5 @@
-import { defineAppsyncRule } from "./types.js";
 import { GLOBAL_CONSTRUCTOR_NAMES } from "./global-constructors.js";
+import { defineAppsyncRule } from "./types.js";
 
 export default defineAppsyncRule({
   meta: {
