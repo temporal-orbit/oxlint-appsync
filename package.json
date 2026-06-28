@@ -7,7 +7,7 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/temporal-orbit/oxlint-appsync.git"
+    "url": "git+https://github.com/temporal-orbit/oxlint-appsync.git"
   },
   "keywords": [
     "oxlint",
@@ -31,6 +31,7 @@
   },
   "scripts": {
     "build": "tsdown",
+    "prepublishOnly": "npm test",
     "test": "npm run build && vitest run",
     "test:unit": "vitest run tests/rules",
     "lint": "oxlint src tests/helpers tests/smoke.test.ts vitest.config.ts tsdown.config.ts"
