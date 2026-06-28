@@ -4,11 +4,11 @@ export function handler() {
   async function load() {
     await Promise.resolve(1);
   }
-  class Example {}
+  class Example { }
   const isArray = [] instanceof Array;
-  for (let i = 0; i < 1; i++) {}
-  while (false) {}
-  do {} while (false);
+  for (let i = 0; i < 1; i++) { }
+  while (false) { }
+  do { } while (false);
   try {
     util.error("oops");
   } catch (error) {
@@ -16,10 +16,10 @@ export function handler() {
   } finally {
     return;
   }
-  for (;;) {
+  for (; ;) {
     continue;
   }
-  loop: for (;;) {
+  loop: for (; ;) {
     break loop;
   }
   const created = new Date();
@@ -31,6 +31,7 @@ export function handler() {
   count++;
   const inverted = ~count;
   const hasKey = "key" in {};
-  [1].map((item) => item);
+  const project = (item) => item;
+  [ 1 ].map(project);
   return { value, load, Example, isArray, created, gen, self, count, inverted, hasKey };
 }

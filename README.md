@@ -73,7 +73,7 @@ export default [
 | `appsync/no-update-operators` | Disallow `++` and `--` |
 | `appsync/no-bitwise-not` | Disallow bitwise NOT (`~`) |
 | `appsync/no-in-operator` | Disallow `in` (use `Object.hasOwn`) |
-| `appsync/no-function-arguments` | Disallow passing functions as call arguments |
+| `appsync/no-function-arguments` | Disallow passing function references as call arguments (inline arrow callbacks are allowed) |
 
 ## Development
 
