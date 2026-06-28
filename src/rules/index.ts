@@ -6,11 +6,11 @@ import noDoWhile from "./no-do-while.js";
 import noForLoop from "./no-for-loop.js";
 import noFunctionArguments from "./no-function-arguments.js";
 import noGenerators from "./no-generators.js";
+import noGlobalConstructor from "./no-global-constructor.js";
 import noInOperator from "./no-in-operator.js";
 import noInstanceof from "./no-instanceof.js";
 import noLabeledStatement from "./no-labeled-statement.js";
 import noNew from "./no-new.js";
-import noStringConstructor from "./no-string-constructor.js";
 import noThis from "./no-this.js";
 import noThrow from "./no-throw.js";
 import noTry from "./no-try.js";
@@ -31,7 +31,7 @@ const rules = {
   "no-instanceof": noInstanceof,
   "no-labeled-statement": noLabeledStatement,
   "no-new": noNew,
-  "no-string-constructor": noStringConstructor,
+  "no-global-constructor": noGlobalConstructor,
   "no-this": noThis,
   "no-throw": noThrow,
   "no-try": noTry,

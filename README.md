@@ -56,7 +56,7 @@ export default [
 
 | Rule | Description |
 | --- | --- |
-| `appsync/no-string-constructor` | Disallow `String()` for stringification |
+| `appsync/no-global-constructor` | Disallow global constructor calls (`String()`, `Number()`, `Boolean()`, `Date()`, etc.) |
 | `appsync/no-async-await` | Disallow `async`/`await` and async functions |
 | `appsync/no-classes` | Disallow `class` declarations and expressions |
 | `appsync/no-instanceof` | Disallow `instanceof` |
@@ -74,6 +74,12 @@ export default [
 | `appsync/no-bitwise-not` | Disallow bitwise NOT (`~`) |
 | `appsync/no-in-operator` | Disallow `in` (use `Object.hasOwn`) |
 | `appsync/no-function-arguments` | Disallow passing function references as call arguments (inline arrow callbacks are allowed) |
+
+## Migration
+
+### 0.1.x → 0.2.0
+
+`appsync/no-string-constructor` was removed. Use `appsync/no-global-constructor` instead — it covers `String()` and other global constructor calls (`Boolean()`, `Number()`, `Date()`, etc.).
 
 ## Development
 

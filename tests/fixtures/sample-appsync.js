@@ -1,6 +1,6 @@
 // Fixture that exercises every AppSync runtime restriction.
 export function handler() {
-  const value = String(42);
+  const value = Number(42);
   async function load() {
     await Promise.resolve(1);
   }

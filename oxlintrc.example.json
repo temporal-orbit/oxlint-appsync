@@ -13,7 +13,7 @@
     "appsync/no-instanceof": "error",
     "appsync/no-labeled-statement": "error",
     "appsync/no-new": "error",
-    "appsync/no-string-constructor": "error",
+    "appsync/no-global-constructor": "error",
     "appsync/no-this": "error",
     "appsync/no-throw": "error",
     "appsync/no-try": "error",

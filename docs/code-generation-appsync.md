@@ -8,7 +8,7 @@ When generating code for AppSync resolvers, place files under a directory named 
 
 Make sure the following rules are followed:
 
-- Do not use `String()` to stringify variables.
+- Do not use global constructor calls such as `String()`, `Boolean()`, `Number()`, `Date()`, `Object()`, `Array()`, or `Function()`. Use literals, supported static methods (e.g. `Number.isFinite`), or AppSync utilities instead.
 - No promises, or async/await.
 - No classes or `instanceof`.
 - Only `for-in` and `for-of` loops are supported. Do not use `for`, `while` or `do-while`.
