@@ -1,0 +1,23 @@
+{
+  "jsPlugins": ["../dist/index.js"],
+  "rules": {
+    "appsync/no-async-await": "error",
+    "appsync/no-bitwise-not": "error",
+    "appsync/no-classes": "error",
+    "appsync/no-continue": "error",
+    "appsync/no-do-while": "error",
+    "appsync/no-for-loop": "error",
+    "appsync/no-function-arguments": "error",
+    "appsync/no-generators": "error",
+    "appsync/no-in-operator": "error",
+    "appsync/no-instanceof": "error",
+    "appsync/no-labeled-statement": "error",
+    "appsync/no-new": "error",
+    "appsync/no-string-constructor": "error",
+    "appsync/no-this": "error",
+    "appsync/no-throw": "error",
+    "appsync/no-try": "error",
+    "appsync/no-update-operators": "error",
+    "appsync/no-while": "error"
+  }
+}

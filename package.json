@@ -1,0 +1,62 @@
+{
+  "name": "oxlint-appsync",
+  "version": "0.1.0",
+  "description": "Oxlint plugin that enforces AWS AppSync JavaScript runtime restrictions",
+  "type": "module",
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/temporal-orbit/oxlint-appsync.git"
+  },
+  "keywords": [
+    "oxlint",
+    "eslint",
+    "appsync",
+    "aws",
+    "graphql",
+    "linter"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "npm run build && vitest run",
+    "test:unit": "vitest run tests/rules",
+    "lint": "oxlint src tests/helpers tests/smoke.test.ts vitest.config.ts tsdown.config.ts"
+  },
+  "dependencies": {
+    "@oxlint/plugins": "^1.42.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "oxlint": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    },
+    "oxlint": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.15.21",
+    "eslint": "^9.27.0",
+    "oxlint": "^1.42.0",
+    "tsdown": "^0.12.9",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1"
+  }
+}
